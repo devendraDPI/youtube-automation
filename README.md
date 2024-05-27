@@ -1,24 +1,22 @@
-# Project Name - _Project Author (Change Me)_
+# YouTube Automation
+Automate testing for YouTube, covering URL validation, message extraction from the "About" section, film rating and genre verification in the "Top Selling" section, playlist name and track count checks in the "Music" tab, and summarizing likes on the first three "Latest News Posts" from the News tab. Utilize DataProvider to search for various items from a dataset.
 
-## Project Name and Description:
-A concise yet descriptive title and an overview of the project’s purpose.
+## Prerequisites
+1. Java 21
+2. Gradle 7.5.1
+3. VS Code 1.89.1
 
-## Installation Instructions:
+## Installation Instructions
 Clear steps to set up and run the project locally.
-> Example:
-```
-# java version 17
-java --version
-```
+1. Make clone of this repo
+2. Open in VS code IDE
+3. Build using `./gradlew build` command
+4. Run test using `./gradlew test` command
 
-## Usage and Examples:
-Provide sample code or usage scenarios to showcase how the project works.
-> Example:
-```
-# to run the project
-./gradlew run
-```
+## Important Links
+1. [YouTube](https://www.youtube.com)
+2. [Test Cases](https://docs.google.com/spreadsheets/d/1ZGFr9LXhcevIBMi598EYstmmKtGeDMFyqiW_Smgf-RY/edit?usp=sharing)
 
-## Important Links:
-Details about useful external links
- 
+## Screenshots
+![YouTube Web Application](screenshots/Screenshot20240527063936.png)
+> YouTube Web Application
