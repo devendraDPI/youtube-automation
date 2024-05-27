@@ -53,8 +53,6 @@ public class TestCases {
     @Test(priority = 1, enabled = true, description = "Verify youtube url and print about page message")
     public void TestCase001() {
         YouTubeUtils.logStatus("TC001", "Start", "Verify youtube url and print about page message");
-        // Launch chrome browser -> BeforeClass
-        // Navigate to https://www.youtube.com -> BeforeMethod
         // Assert current URL contains "youtube"
         String urlToContain = "youtube";
         Boolean status = YouTubeUtils.verifyCurrentUrlContains(driver, urlToContain);
@@ -75,8 +73,6 @@ public class TestCases {
     @Test(priority = 2, enabled = true, description = "Verify movie is marked 'A' for Mature and movie is either 'Comedy' or 'Animation'")
     public void TestCase002() {
         YouTubeUtils.logStatus("TC002", "Start", "Verify movie is marked 'A' for Mature and movie is either 'Comedy' or 'Animation'");
-        // Launch chrome browser -> BeforeClass
-        // Navigate to https://www.youtube.com -> BeforeMethod
         // Navigate to the "Films" tab
         By filmsTab = By.xpath("//a[contains(@title, 'Films') or contains(@title, 'Movies')]");
         YouTubeUtils.scrollToViewport(driver, filmsTab);
@@ -106,8 +102,6 @@ public class TestCases {
     @Test(priority = 2, enabled = true, description = "Verify number of tracks is 50 or less")
     public void TestCase003() {
         YouTubeUtils.logStatus("TC003", "Start", "Verify number of tracks is 50 or less");
-        // Launch chrome browser -> BeforeClass
-        // Navigate to https://www.youtube.com -> BeforeMethod
         // Navigate to the "Music" tab of the application
         By musicTab = By.xpath("//a[contains(@title, 'Music')]");
         YouTubeUtils.scrollToViewport(driver, musicTab);
@@ -143,8 +137,6 @@ public class TestCases {
     @Test(priority = 1, enabled = true, description = "Verify news body and likes")
     public void TestCase004() {
         YouTubeUtils.logStatus("TC004", "Start", "Verify news body and likes");
-        // Launch chrome browser -> BeforeClass
-        // Navigate to https://www.youtube.com -> BeforeMethod
         // Navigate to the "News" tab of the application
         By newsTab = By.xpath("//a[contains(@title, 'News')]");
         YouTubeUtils.scrollToViewport(driver, newsTab);
@@ -164,8 +156,6 @@ public class TestCases {
     @Test(priority = 1, enabled = true, description = "Verify video views count", dataProvider = "searchTerms", dataProviderClass = ExcelDP.class)
     public void TestCase005(String searchTerms) {
         YouTubeUtils.logStatus("TC005", "Start", "Verify video views count: " + searchTerms);
-        // Launch chrome browser -> BeforeClass
-        // Navigate to https://www.youtube.com -> BeforeMethod
         // Search for the item
         By searchBox = By.xpath("//input[contains(@id, 'search')]");
         ActionsWrapper.sendKeysAW(driver, searchBox, searchTerms);
