@@ -17,7 +17,7 @@ import demo.utils.YouTubeUtils;
 
 public class TestCases {
     WebDriver driver;
-    SoftAssert sa = new SoftAssert();
+    SoftAssert sa;
 
     @BeforeClass
     public void createDriver() {
@@ -73,6 +73,8 @@ public class TestCases {
     @Test(priority = 2, enabled = true, description = "Verify movie is marked 'A' for Mature and movie is either 'Comedy' or 'Animation'")
     public void TestCase002() {
         YouTubeUtils.logStatus("TC002", "Start", "Verify movie is marked 'A' for Mature and movie is either 'Comedy' or 'Animation'");
+        sa = new SoftAssert();
+
         // Navigate to the "Films" tab
         By filmsTab = By.xpath("//a[contains(@title, 'Films') or contains(@title, 'Movies')]");
         YouTubeUtils.scrollToViewport(driver, filmsTab);
@@ -102,6 +104,8 @@ public class TestCases {
     @Test(priority = 2, enabled = true, description = "Verify number of tracks is 50 or less")
     public void TestCase003() {
         YouTubeUtils.logStatus("TC003", "Start", "Verify number of tracks is 50 or less");
+        sa = new SoftAssert();
+
         // Navigate to the "Music" tab of the application
         By musicTab = By.xpath("//a[contains(@title, 'Music')]");
         YouTubeUtils.scrollToViewport(driver, musicTab);
